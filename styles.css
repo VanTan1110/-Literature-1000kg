@@ -1,0 +1,101 @@
+body {
+  background-image: url('img/backtho.jpg');
+  background-repeat: no-repeat;	
+  background-attachment: fixed;
+  background-size:  100% 100%;
+  background-color: powderblue;
+}
+#myHeader {
+  background-color: red;
+  color: white;
+  padding: 40px;
+  text-align: center;
+  font-family:consolas;
+border: 2px solid black;
+  font-size:60px;
+}
+.myclass{
+  background-color: tomato;
+  border: 2px solid black;
+  margin: 20px;
+  padding: 20px;
+  text-align:center;
+}
+.youclass{
+  background-color: pink;
+  border: 4px double green;
+  margin: 40px;
+  padding: 10px;
+  text-align:center;
+}
+h1 {
+  color: red;
+ 
+}
+
+h2{
+ background-image: url('img/backdep.jpg');
+ background-repeat: no-repeat;	
+  background-attachment: fixed;
+  background-size:  100% 100%;
+ badding:30px;
+}
+
+p {
+  color: green;
+  font-size:40px;
+}
+
+div {
+  color: purple;
+  font-size:30px;
+}
+
+span {
+  color:blue;
+  border: 4px solid yellow;
+  background-color: orange;
+ } 
+
+a:link {
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+img{
+  width:500;
+  heigth:379;
+
+}
+	
+table {
+  border: 6px double black;
+  border-collapse: collapse;
+}
+
+th,td{
+border: 2px solid black;
+}
+
+th{
+background-color: Khaki;
+}
