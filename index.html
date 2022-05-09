@@ -16,7 +16,110 @@
     .text-center{
       text-align: center;
     }
+    .navbar {
+  width: 100%;
+  background-color: #143980;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  right: 0;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.navbar a {
+  float: left;
+  text-align: center;
+  padding: 1rem 2rem 1rem 2rem;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.navbar a:hover {
+  background-color: #d92727;
+}
+
+.navbar a:active {
+  background-color: #fff;
+  color: #143980;
+}
+
+.active {
+  background-color: #d92727;
+}
+
+.headroom {
+  position: fixed;
+  top: 0;
+  transition: top 0.15s;
+  -webkit-transition: top 0.15s;
+  -moz-transition: top 0.15s;
+  -o-transition: top 0.15s;
+  -ms-transition: top 0.15s;
+}
+
+.headroom-pinned {
+  top: -250px;
+}
+
+.headroom--unpinned {
+  top: -80px;
+  -webkit-transition: 0.25s;
+  -o-transition: 0.25s;
+  -moz-transition: 0.25s;
+  -ms-transition: 0.25s;
+  transition: 0.25s;
+  -webkit-transform: translateY(-80px);
+  -o-transform: translateY(-80px);
+  -moz-transform: translateY(-80px);
+  -ms-transform: translateY(-80px);
+  transform: translateY(-80px);
+}
+    $(function () {
+    $('.headroomm').each(function () {
+        var $doc = $(document)
+            , $win = $(window)
+            , $self = $(this)
+
+            , $sHeight = $self.outerHeight(false)
+            , isHidden = false
+            , lastScrollTop = 0
+        $win.on('scroll', function () {
+            var scrollTop = $doc.scrollTop()
+            var offset = scrollTop - lastScrollTop
+            lastScrollTop = scrollTop
+            if (offset > 10 && scrollTop > $sHeight) {
+                if (!isHidden) {
+                    $self.addClass('headroomm-pinned')
+                    isHidden = true
+                }
+            } else if (offset < -10 || scrollTop < $sHeight) {
+                if (isHidden) {
+                    $self.removeClass('headroomm-pinned')
+                    isHidden = false
+                }
+            }
+        });
+    });
+});
   </style>
+  <div class="navbar navbar-inverse headroom" id="navbar" role="navigation">
+    <a target="_blank" href="index.html"><i class="fa fa-fw fa-home"></i> Trang chủ</a>
+    <a target="_blank" href="assets/html/tongquan.html"><i class="fa-solid fa-school"></i> Laliga</a>
+    <a target="_blank" href="assets/html/BGH.html"><i class="fa-solid fa-user-group"></i> Premier League</a>
+    <a target="_blank" href="assets/html/daotao.html"><i class="fa-solid fa-graduation-cap"></i> Seria</a>
+    <a target="_blank" href="assets/html/tuyensinh.html"><i class="fa fa-fw fa-user"></i> League 1</a>
+    <a target="_blank" href="assets/html/lienhe.html"><i class="fa fa-fw fa-envelope"></i> Bundesliga</a>
+</div>
 <h1 id="C5" style="text-align:center;font-size:70px;color:Red;font-family:Times New Roman">Những cầu thủ được định giá cao nhất thế giới theo trang Transfermarkt</h1> </br>
   <div id="content">
   <div class="text-center"> <img style="width:350px;height:350px;align:center;" src="img/tien.jpg" alt="Magic" >   </div>
